@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Температура</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="editModule.js"></script>
+  </head>
+  <body style="font-family: Georgia, 'Times New Roman', Times, serif;">
+    <h2>Температура</h2>
+    <form name="climateForm">
+      <input type="hidden" name="id" value="0" />
+      <div class="form-group">
+        <label for="region">Регион:</label>
+        <input class="form-control" name="region" />
+      </div>
+      <div class="form-group">
+        <label for="average">Средняя температура (градусы по Цельсию):</label>
+        <input type="number" class="form-control" name="average" />
+      </div>
+      <div class="form-group">
+        <label for="precipitation">Осадки (%):</label>
+        <input type="number" class="form-control" name="precipitation" />
+      </div>
+      <div class="form-group">
+        <label for="day">Дата:</label>
+        <input type="date" class="form-control" name="day" />
+      </div>
+      <div class="panel-body">
+        <button type="submit" class="btn btn-sm btn-primary">Сохранить</button>
+        <a id="open" class="btn btn-sm btn-primary">Открыть отчет</a>
+        <a id="reset" class="btn btn-sm btn-primary">Сбросить</a>
+      </div>
+    </form>
+    <table class="table table-condensed table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Регион</th>
+          <th>Ср. температура</th>
+          <th>Осадки</th>
+          <th>Дата</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script src="addModule.js"></script>
+    <script src="deleteModule.js"></script>
+    <script src="editModule.js"></script>
+    <script src="outputModule.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
